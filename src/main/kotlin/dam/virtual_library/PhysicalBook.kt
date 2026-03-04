@@ -1,13 +1,16 @@
 package dam.virtual_library
 
+//Classe que cria objetos que representam livros físicos
 class PhysicalBook (private var title: String, private var author: String, private var publicationYear: Int, private var availableCopies: Int, private var weight: Int, private var hasHardcover: Boolean= true):
     Book(title, author, publicationYear, availableCopies){
 
+    //Função que mostra informações sobre um livro físico em forma de string
     override fun toString(): String{
         val basicInfo= super.toString()
         return "$basicInfo \n Weight: $weight g Hard cover: ${if (hasHardcover) "Yes" else "No"}"
     }
 
+    //Getters e setters
     override fun getStorageInfo() {
         println("Physical book: $weight g / Hard cover: ${if (hasHardcover) "Yes" else "No"}")
     }

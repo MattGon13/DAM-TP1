@@ -1,14 +1,17 @@
 package dam.virtual_library
 
+//Classe que representa um livro, contendo informações sobre o mesmo.
 abstract class Book(private var title: String, private var author: String, private var publicationYear: Int, private var availableCopies: Int){
-    init {
-        println("$title by $author has been created!")
+    init { //Notifica o utilizador sempre que um livro foi criado com sucesso
+        println("\n $title by $author has been created!")
     }
 
+    //Função que fornece todas as informações sobre o livro
     override fun toString(): String{
-        return "$title by $author ($publicationYear - ${getPublicationYear()}): $availableCopies available copies."
+        return "\n $title by $author ($publicationYear - ${getPublicationYear()}): $availableCopies available copies."
     }
 
+    //Getters e setters
     abstract fun getStorageInfo()
 
     fun getTitle(): String{
@@ -46,7 +49,10 @@ abstract class Book(private var title: String, private var author: String, priva
     fun setAvailableCopies(availableCopies: Int){
         when{
             availableCopies < 0 -> println("There can't be a negative number of copies.")
-            availableCopies == 0 -> println("Warning: Book is now out of stock!")
+            availableCopies == 0 -> {
+                println("Warning: The book $title by $author is now out of stock!")
+                this.availableCopies = availableCopies
+            }
             else -> this.availableCopies = availableCopies
         }
     }

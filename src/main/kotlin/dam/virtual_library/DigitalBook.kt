@@ -1,18 +1,22 @@
 package dam.virtual_library
 
-class DigitalBook(private var title: String, private var author: String, private var publicationYear: Int, private var availableCopies: Int, private var fileSize: Int, private var format: String):
+//Classe que cria objetos que representam livros digitais
+class DigitalBook(private var title: String, private var author: String, private var publicationYear: Int, private var availableCopies: Int, private var fileSize: Double, private var format: String):
     Book(title, author, publicationYear, availableCopies) {
 
+    //Função que mostra informações sobre um livro digital em forma de string
     override fun toString(): String{
         val basicInfo= super.toString()
         return "$basicInfo \n File size: $fileSize MB Format: $format"
     }
 
+    //Getters e setters
+
     override fun getStorageInfo() {
         println("Stored digitally: $fileSize MB / Format: $format")
     }
 
-    fun getfileSize(): Int {
+    fun getfileSize(): Double {
         return fileSize
     }
 
@@ -20,7 +24,7 @@ class DigitalBook(private var title: String, private var author: String, private
         return format
     }
 
-    fun setfileSize(fileSize: Int) {
+    fun setfileSize(fileSize: Double) {
         this.fileSize = fileSize
     }
 
