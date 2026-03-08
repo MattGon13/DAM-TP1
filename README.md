@@ -1,8 +1,8 @@
 # Assignment 1 - Getting Started with Kotlin / Exploring Kotlin Again
-Course: Desenvolvimento de Aplicações Móveis (DAM)
-Student(s): Matilde Gonçalves (51706) 
-Date: 08/03/2026
-Repository URL: [Insert Your GitHub Repo URL]
+**Course**: Desenvolvimento de Aplicações Móveis (DAM)  
+**Student(s)**: Matilde Gonçalves (51706)   
+**Date**: 08/03/2026  
+**Repository URL**: `https://github.com/MattGon13/DAM-TP1.git`  
 
 ## 1. Introduction
 Este primeiro trabalho tinha como propósito principal, introduzir os conceitos básicos de programação com a linguagem Kotlin como tipos básicos, controlo de fluxo e classes e objetos. Isto foi feito através da realização de quatro exercícios onde deveríamos explorar a documentação oficial da linguagem e aplicá-la nos mesmos, de modo a explorar os conceitos básicos da linguagem. Os objetivos deste trabalho foram então realizar de forma independente os três exercícios propostos usando as bases de Kotlin que obtivemos durante as aulas e, adicionalmente, explorar a documentação da linguagem de modo a obter mais bases para a resolução dos exercícios.
